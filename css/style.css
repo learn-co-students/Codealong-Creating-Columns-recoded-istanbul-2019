@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+  
 }
 
 /* Descendent Selector */
@@ -69,4 +69,95 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+/* //// MEDIA ///// */ 
+
+img, video, audio {
+  max-width: 100%;
+}
+
+/* //// LAYOUT ///// */ 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 960px;
+  margin: 0 auto;
+  
+}
+/*we have consider margin rate when crating column
+col-1 is 1/3 in page and col-2 is 2/3 but we have to 
+culculate margin rate whij is %2 per column. two column make 
+%4.
+so 100-4=96 
+96/3 =32
+col-1's width should be 1/3 that is 32 
+col-2's width should be 2/3 that is 64 plus+2 margin
+becouse we have two column-here we want to just one margin which
+is betwwen col-1 and col-2. so we dont need other side margin for .col-2
+and we can add this %2 margin to col-2 width
+*/
+.col-1{
+float: left;
+width: 32%;
+background: #ccc;
+}
+.col-2{
+  float: left;
+  width: 66%;
+  background: #ccc;
+}
+.col-3{
+background: #ccc;
+}
+[class*='col-']{ /* col- ile baslayan butun classlara uygula demek*/
+  margin-left: 2%;
+}
+
+.first{
+  margin-left: 0%;
+}
+
+.clearfix:after{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/* //// SECTION ///// */ 
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+}
+section{
+  margin-bottom: 20px;
+  padding: 20px;
+  
+}
+
+/* //// SOCIAL ///// */ 
+ 
+#social{
+  position: fixed;
+   top: 200px;
+   right: 20px;
+   width: 40px;
+   z-index: 1;
+}
+
+#social a{
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow ;
 }
