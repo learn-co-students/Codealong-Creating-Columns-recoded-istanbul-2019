@@ -58,12 +58,12 @@ figcaption {
 /* Psuedo Selector */
 
 #details a:link, #details a:visited {
-  color: black;
+  color: blue;
   text-decoration: none;
 }
 
 #details a:hover {
-  color: black;
+  color: white;
   text-decoration: underline;
 }
 
