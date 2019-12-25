@@ -48,7 +48,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+  
 }
 
 /* Descendent Selector */
@@ -79,7 +79,6 @@ figcaption {
 .wrapper {
   width: 960px;
   margin: 0 auto;
-  background-color: #eee;
 }
 
 .col-1 {
@@ -119,6 +118,15 @@ img, video, audio {
   max-width: 100%;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+
+}
 
 section {
   margin-bottom: 20px;
