@@ -70,3 +70,7 @@ figcaption {
 #details a:active {
   color: red;
 }
+
+img,video,audio{
+  max-width: 100px;
+}
